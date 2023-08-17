@@ -1,1 +1,18 @@
 
+Thu 17 Aug 2023 07:56:43 PM UTC: 
+ exercises.c | 23 +++++++++++++++++++++--
+ 1 file changed, 21 insertions(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘reverseArray’:
+exercises.c:36:13: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘)’ token
+   36 |   for (int i)
+      |             ^
+exercises.c:38:1: error: expected expression before ‘}’ token
+   38 | }
+      | ^
+exercises.c:34:7: error: unused variable ‘aux’ [-Werror=unused-variable]
+   34 |   int aux;
+      |       ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+bf84b98
