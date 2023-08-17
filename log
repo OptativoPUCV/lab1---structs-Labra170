@@ -16,3 +16,9 @@ exercises.c:34:7: error: unused variable ‘aux’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 bf84b98
+Thu 17 Aug 2023 08:51:03 PM UTC: 
+ exercises.c | 17 +++++++++++++----
+ 1 file changed, 13 insertions(+), 4 deletions(-)
+ tests:  0|5
+total_score: 20/70
+31cf0ef
