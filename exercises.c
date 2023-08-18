@@ -67,7 +67,7 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
         pos++;
       }
     }
-
+  
   *newSize = pos;
   return arrEven;
 }
@@ -107,10 +107,10 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
         }
     }
 
-  for (int i = 0; i < totalSize; i++)
+  /*for (int i = 0; i < totalSize; i++)
     {
       result[i] = arrAux[i];
-    }
+    }*/
 }
 
 /*
