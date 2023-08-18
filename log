@@ -264,3 +264,14 @@ Fri 18 Aug 2023 11:50:50 PM UTC:
  tests:  0|4
 total_score: 30/70
 1ed8d77
+Fri 18 Aug 2023 11:58:56 PM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:159:10: error: ‘orden’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+  159 |   return orden;
+      |          ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+8e79746
