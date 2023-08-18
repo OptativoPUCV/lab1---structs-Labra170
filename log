@@ -67,3 +67,14 @@ exercises.c:67:10: error: returning ‘int’ from a function with return type �
 cc1: all warnings being treated as errors
 Compilation failed
 ea9cfee
+Fri 18 Aug 2023 12:22:11 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:67:10: error: function returns address of local variable [-Werror=return-local-addr]
+   67 |   return (int *) arrEven;
+      |          ^~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+756e22b
