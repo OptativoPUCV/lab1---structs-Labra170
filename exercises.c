@@ -133,7 +133,7 @@ int checkSorted(int arr[], int size)
 
   for (int i = 1; i < size; i++)
     {
-      for (int k = 0; k < size-i-1; k++)
+      for (int k = 0; k < size-i; k++)
       {
         if (arrAux[k] > arrAux[k+1])
           {
