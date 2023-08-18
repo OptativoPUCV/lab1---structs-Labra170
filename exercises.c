@@ -146,14 +146,14 @@ int checkSorted(int arr[], int size)
 
   for (int i = 0; i < size; i++)
     {
-      if (arr[i] != arrAux[i]) break;
-      orden = 1;
+      if (arr[i] == arrAux[i]) orden = 1;
+      else orden = 0;
     }
 
   for (int k = 0; k < size; k++)
     {
-      if (arr[k] != arrAux[size-k-1]) break;
-      orden = -1;
+      if (arr[k] == arrAux[size-k-1]) orden = -1;
+      else orden = 0;
     }
   
   
