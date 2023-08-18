@@ -51,7 +51,7 @@ los números pares del arreglo original.
 */
 int *filterEvenNumbers(int arr[], int size, int *newSize) 
 { 
-  int arrEven[size/2];
+  int *arrEven[size/2];
   int pos = 0;
   
   for (int i = 0; i < size; i++)

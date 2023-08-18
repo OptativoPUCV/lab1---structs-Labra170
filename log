@@ -114,3 +114,18 @@ exercises.c:67:10: error: function returns address of local variable [-Werror=re
 cc1: all warnings being treated as errors
 Compilation failed
 f02fc6a
+Fri 18 Aug 2023 12:40:36 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:61:22: error: assignment to ‘int *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   61 |         arrEven[pos] = arr[i];
+      |                      ^
+exercises.c:67:10: error: returning ‘int **’ from a function with incompatible return type ‘int *’ [-Werror=incompatible-pointer-types]
+   67 |   return arrEven;
+      |          ^~~~~~~
+exercises.c:67:10: error: function returns address of local variable [-Werror=return-local-addr]
+cc1: all warnings being treated as errors
+Compilation failed
+65db98b
