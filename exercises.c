@@ -51,14 +51,17 @@ los números pares del arreglo original.
 */
 int *filterEvenNumbers(int arr[], int size, int *newSize) 
 { 
-  int mitad = size/2;
-  int *arrEven = (int *) calloc(mitad, sizeof(int));
+  
+  int *arrEven = (int *) malloc(1 * sizeof(int));
+  if (arrEven == NULL) exit(EXIT_FAILURE);
   int pos = 0;
   
   for (int i = 0; i < size; i++)
     {
       if (arr[i] % 2 == 0)
       { 
+        arrEven = (int *) realloc(arrEven, (pos+1) * sizeof(int));
+        if (arrEven == NULL) exit(EXIT_FAILURE);
         arrEven[pos] = arr[i];
         pos++;
       }
