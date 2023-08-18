@@ -37,9 +37,10 @@ void reverseArray(int arr[], int size)
     {
       arrAux[i] = arr[size-1-i];
     }
-  for (int j = 0; j < size; j++)
+  
+  for (int k = 0; k < size; k++)
     {
-      arr[j] = arrAux[j];
+      arr[k] = arrAux[k];
     }
 }
 
@@ -78,7 +79,39 @@ ordenados y sus tamaños, y luego fusione estos dos
 arreglos en un tercer arreglo también ordenado.
 */
 void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
-                       int result[]) {}
+                       int result[]) 
+{
+  int totalSize = size1 + size2;
+  int arrAux[totalSize];
+  int aux = 0;
+
+  for (int i = 0; i < size1; i++)
+    {
+      arrAux[i] = arr1[i];
+    }
+  for (int k = 0; k < totalSize; k++)
+    {
+      arrAux[size1+k] = arr2[k];
+    }
+  
+    for (int i = 1; i < totalSize; i++ )
+    {
+        for (int k = 0; k < totalSize-i; k++)
+        {
+            if (arrAux[k] > arrAux[k+1])
+            {
+                aux = arrAux[k];
+                arrAux[k] = arrAux[k+1];
+                arrAux[k+1] = aux;
+            }
+        }
+    }
+
+  for (int i = 0; i < totalSize; i++)
+    {
+      result[i] = arrAux[i];
+    }
+}
 
 /*
 Ejercicio 5: Comprobación de Ordenación
