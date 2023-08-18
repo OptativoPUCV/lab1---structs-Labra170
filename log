@@ -179,3 +179,20 @@ Fri 18 Aug 2023 04:43:26 AM UTC:
  tests:  0|4
 total_score: 30/70
 369c14b
+Fri 18 Aug 2023 05:07:39 AM UTC: 
+ exercises.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:87:7: error: ‘result’ redeclared as different kind of symbol
+   87 |   int result[totalSize];
+      |       ^~~~~~
+exercises.c:82:28: note: previous definition of ‘result’ with type ‘int *’
+   82 |                        int result[])
+      |                        ~~~~^~~~~~~~
+exercises.c:87:7: error: variable ‘result’ set but not used [-Werror=unused-but-set-variable]
+   87 |   int result[totalSize];
+      |       ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2be8ded
