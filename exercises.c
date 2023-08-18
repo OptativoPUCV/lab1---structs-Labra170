@@ -151,9 +151,9 @@ int checkSorted(int arr[], int size)
       orden = 1;
     }
 
-  for (int i = 0; i < size; i++)
+  for (int k = 0; k < size; k++)
     {
-      if (arr[i] != arrAux[size-i-1]) {break;}
+      if (arr[k] != arrAux[size-k-1]) {break;}
       orden = -1;
     }
   
