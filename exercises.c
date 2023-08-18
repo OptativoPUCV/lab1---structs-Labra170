@@ -51,7 +51,8 @@ los números pares del arreglo original.
 */
 int *filterEvenNumbers(int arr[], int size, int *newSize) 
 { 
-  int *arrEven = (int *) calloc(size/2, sizeof(int));
+  int mitad = size/2;
+  int *arrEven = (int *) calloc(mitad, sizeof(int));
   int pos = 0;
   
   for (int i = 0; i < size; i++)
