@@ -94,17 +94,17 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
       arrAux[size1+k] = arr2[k];
     }
   
-    for (int i = 1; i < totalSize; i++)
+  for (int i = 1; i < totalSize; i++)
     {
-        for (int k = 0; k < totalSize-i; k++)
-        {
-            if (arrAux[k] > arrAux[k+1])
-            {
-                aux = arrAux[k];
-                arrAux[k] = arrAux[k+1];
-                arrAux[k+1] = aux;
-            }
-        }
+      for (int k = 0; k < totalSize-i; k++)
+      {
+        if (arrAux[k] > arrAux[k+1])
+          {
+              aux = arrAux[k];
+              arrAux[k] = arrAux[k+1];
+              arrAux[k+1] = aux;
+          }
+      }
     }
 
   
@@ -120,7 +120,44 @@ Descripción: Escribe una función que tome un arreglo y su tamaño,
 y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
   0 si no está ordenado, y -1 si está ordenado en orden descendente.
 */
-int checkSorted(int arr[], int size) { return -2; }
+int checkSorted(int arr[], int size) 
+{ 
+  int arrAux[size];
+  int aux;
+
+  for (int i = 0; i < size; i++)
+    {
+      arrAux[i] = arr[i];
+    }
+
+  for (int i = 1; i < size; i++)
+    {
+      for (int k = 0; k < size-i; k++)
+      {
+        if (arrAux[k] > arrAux[k+1])
+          {
+              aux = arrAux[k];
+              arrAux[k] = arrAux[k+1];
+              arrAux[k+1] = aux;
+          }
+      }
+    }
+
+  for (int i = 0; i < size; i++)
+    {
+      if (arr[i] != arrAux[i]) break;
+      return 1;
+    }
+
+  for (int i = 0; i < size; i++)
+    {
+      if (arr[i] != arrAux[size-i-1]) break;
+      return -1;
+    }
+  
+  
+  return 0; 
+}
 
 /*
 Ejercicio 6: Información de una Biblioteca
