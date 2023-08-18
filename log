@@ -39,3 +39,20 @@ exercises.c:68:1: error: control reaches end of non-void function [-Werror=retur
 cc1: all warnings being treated as errors
 Compilation failed
 7a50917
+Fri 18 Aug 2023 12:21:24 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:67:19: error: expected expression before ‘]’ token
+   67 |   return *arrEven[];
+      |                   ^
+exercises.c:54:7: error: variable ‘arrEven’ set but not used [-Werror=unused-but-set-variable]
+   54 |   int arrEven[size/2];
+      |       ^~~~~~~
+exercises.c:68:1: error: control reaches end of non-void function [-Werror=return-type]
+   68 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+f2e7f29
