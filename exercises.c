@@ -214,6 +214,5 @@ typedef struct nodo {
 
 Nodo *crearListaEnlazada(int arr[], int size) 
 {
-  
-  return &array[0]; 
+  return NULL; 
 }
