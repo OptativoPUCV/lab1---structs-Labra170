@@ -107,8 +107,8 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
       }
     }
 
-  
-  /*for (int i = ; i < totalSize; i++)
+  // Al usar esta parte, el programa crashea.
+  /*for (int i = ; i < totalSize; i++) 
     {
       result[i] = arrAux[i];
     }*/
@@ -188,7 +188,14 @@ typedef struct {
 } Libro;
 
 void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
-                      int anioNacimiento, int anioPublicacion) {}
+                      int anioNacimiento, int anioPublicacion)
+{
+  strcpy(libro->titulo, titulo);
+  strcpy(libro->autor.nombre, nombreAutor);
+  libro->autor.anioNacimiento = anioNacimiento;
+  libro->anioPublicacion = anioPublicacion;
+  
+}
 
 /*
 Ejercicio 7: Lista enlazada de números
